@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Lista Contatos</string>
     <string name="iv_photograph_content_description">Descrição Imagem</string>
+
+    <!--  OPTION MENU  -->
+    <string name="menu_1">Menu 1</string>
+    <string name="menu_2">Menu 2</string>
+    <string name="menu_3">Menu 3</string>
 </resources>

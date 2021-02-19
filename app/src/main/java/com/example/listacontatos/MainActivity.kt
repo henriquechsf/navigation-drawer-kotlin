@@ -2,6 +2,10 @@ package com.example.listacontatos
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -41,5 +45,30 @@ class MainActivity : AppCompatActivity() {
                         )
                 )
         )
+    }
+
+    // metodo que renderiza o menu na tela
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.item_menu_1 -> {
+                showToast("Item de menu 1")
+                return true
+            }
+            R.id.item_menu_2 -> {
+                showToast("Item de menu 2")
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
