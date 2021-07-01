@@ -39,12 +39,12 @@ class MainActivity : AppCompatActivity(), ClickItemContactListener {
     fun fetchListContact() {
         val list = arrayListOf(
                 Contact(
-                        "Henrique Souza",
+                        "João da Silva",
                         "(44)99999-8888",
                         "img.png"
                 ),
                 Contact(
-                        "Dani Guerra",
+                        "Maria Souza",
                         "(44)98888-7777",
                         "img2.png"
                 )
